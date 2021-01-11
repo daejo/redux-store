@@ -5,9 +5,9 @@ import { idbPromise } from "../../utils/helpers";
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import './style.css';
-import { useStoreContext } from '../../utils/GlobalState';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { loadStripe } from '@stripe/stripe-js';
+import { useDispatch, useSelector } from "react-redux";
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
